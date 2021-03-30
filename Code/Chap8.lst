@@ -1096,10 +1096,57 @@ class UseOptArgs
     }
 }
 
-
-
-
 listing 25
+//Применить именованные аргументы.
+using System;
+
+class NamedArgsDemo
+{
+    //Выяснить, делится ли одно значение нацело на другое.
+    static bool IsFactor(int val, int divisor)
+    {
+        if ((val % divisor == 0))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    static void Main()
+    {
+        //Ниже демонстрируются разные способы вызова метода IsFactor().
+
+        //Вызов с использованием позиционных аргументов.
+        if (IsFactor(10, 2))
+        {
+            Console.WriteLine("2 - множитель 10.");
+        }
+
+        //Вызов с использованием именованных аргументов.
+        if (IsFactor(val: 10, divisor: 2))
+        {
+            Console.WriteLine("2 - множитель 10.");
+        }
+
+        //Для именованного аргумента порядок указания не имеет значения.
+        if (IsFactor(divisor: 2, val: 10))
+        {
+            Console.WriteLine("2 - множитель 10.");
+        }
+
+        //Применить как позиционный, так и именованный аргумент.
+        if (IsFactor(10,divisor: 2))
+        {
+            Console.WriteLine("2 - множитель 10.");
+        }
+
+        //Задержка программы.
+        Console.ReadKey();
+    }
+}
+
+listing 26
 // Display all command-line information. 
  
 using System; 
@@ -1115,7 +1162,7 @@ class CLDemo {
   }  
 }
 
-listing 26
+listing 27
 // Encode or decode a message using a simple substitution cipher. 
  
 using System; 
@@ -1152,7 +1199,7 @@ class Cipher {
   } 
 }
 
-listing 27
+listing 28
 // A simple example of recursion.  
  
 using System; 
@@ -1194,7 +1241,7 @@ class Recursion {
   }  
 }
 
-listing 28
+listing 29
 // Display a string in reverse by using recursion. 
  
 using System; 
@@ -1226,7 +1273,7 @@ class RevStrDemo {
   } 
 }
 
-listing 29
+listing 30
 // Use static. 
  
 using System; 
@@ -1254,7 +1301,7 @@ class SDemo {
   } 
 }
 
-listing 30
+listing 31
 class StaticError { 
   public int Denom = 3; // a normal instance variable 
   public static int Val = 1024; // a static variable 
@@ -1266,7 +1313,7 @@ class StaticError {
   } 
 }
 
-listing 31
+listing 32
 using System; 
  
 class AnotherStaticError { 
@@ -1282,7 +1329,7 @@ class AnotherStaticError {
   } 
 }
 
-listing 32
+listing 33
 class MyClass { 
   // A non-static method. 
   void NonStaticMeth() { 
@@ -1296,7 +1343,7 @@ class MyClass {
   } 
 }
 
-listing 33
+listing 34
 // Use a static field to count instances. 
  
 using System; 
@@ -1331,7 +1378,7 @@ class CountDemo {
   }  
 }
 
-listing 34
+listing 35
 // Use a static class factory. 
  
 using System; 
@@ -1368,7 +1415,7 @@ class MakeObjects {
   } 
 }
 
-listing 35
+listing 36
 // Use a static constructor. 
  
 using System; 
@@ -1399,7 +1446,7 @@ class ConsDemo {
   } 
 }
 
-listing 36
+listing 37
 // Demonstrate a static class. 
   
 using System;  
@@ -1447,7 +1494,7 @@ class StaticClassDemo {
   }  
 }
 
-listing 37
+listing 38
 // Demonstrate optional arguments. 
   
 using System;  
@@ -1470,7 +1517,7 @@ class OptionArgDemo {
   }   
 }
 
-listing 38
+listing 39
 // Use an optional argument to simplify a call to a method. 
   
 using System;  
@@ -1500,7 +1547,7 @@ class UseOptArgs {
   }   
 }
 
-listing 39
+listing 40
 // Use named arguments. 
   
 using System;  
