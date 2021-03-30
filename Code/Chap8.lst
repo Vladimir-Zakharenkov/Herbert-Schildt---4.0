@@ -1028,6 +1028,39 @@ class ObjInitDemo {
 }
 
 listing 23
+// Продемонстрировать необязательные аргументы.
+
+using System;
+
+class OptionArgDemo
+{
+    static void OptArgMeth(int alpha, int beta = 10, int gamma = 20)
+    {
+        Console.WriteLine("Это аргументы alpha, beta и gamma: " + alpha + " " + beta + " " + gamma);
+    }
+
+    static void Main()
+    {
+        //Передать все аргументы явным образом.
+        OptArgMeth(1, 2, 3);
+
+        //Сделать аргумент gamma необязательным.
+        OptArgMeth(1, 2);
+
+        //Сделать оба аргумента beta и gamma необязательными.
+        OptArgMeth(1);
+
+        //Задержка программы.
+        Console.ReadKey();
+    }
+}
+
+
+
+
+
+
+listing 24
 // Display all command-line information. 
  
 using System; 
@@ -1043,7 +1076,7 @@ class CLDemo {
   }  
 }
 
-listing 24
+listing 25
 // Encode or decode a message using a simple substitution cipher. 
  
 using System; 
@@ -1080,7 +1113,7 @@ class Cipher {
   } 
 }
 
-listing 25
+listing 26
 // A simple example of recursion.  
  
 using System; 
@@ -1122,7 +1155,7 @@ class Recursion {
   }  
 }
 
-listing 26
+listing 27
 // Display a string in reverse by using recursion. 
  
 using System; 
@@ -1154,7 +1187,7 @@ class RevStrDemo {
   } 
 }
 
-listing 27
+listing 28
 // Use static. 
  
 using System; 
@@ -1182,7 +1215,7 @@ class SDemo {
   } 
 }
 
-listing 28
+listing 29
 class StaticError { 
   public int Denom = 3; // a normal instance variable 
   public static int Val = 1024; // a static variable 
@@ -1194,7 +1227,7 @@ class StaticError {
   } 
 }
 
-listing 29
+listing 30
 using System; 
  
 class AnotherStaticError { 
@@ -1210,7 +1243,7 @@ class AnotherStaticError {
   } 
 }
 
-listing 30
+listing 31
 class MyClass { 
   // A non-static method. 
   void NonStaticMeth() { 
@@ -1224,7 +1257,7 @@ class MyClass {
   } 
 }
 
-listing 31
+listing 32
 // Use a static field to count instances. 
  
 using System; 
@@ -1259,7 +1292,7 @@ class CountDemo {
   }  
 }
 
-listing 32
+listing 33
 // Use a static class factory. 
  
 using System; 
@@ -1296,7 +1329,7 @@ class MakeObjects {
   } 
 }
 
-listing 33
+listing 34
 // Use a static constructor. 
  
 using System; 
@@ -1327,7 +1360,7 @@ class ConsDemo {
   } 
 }
 
-listing 34
+listing 35
 // Demonstrate a static class. 
   
 using System;  
@@ -1375,7 +1408,7 @@ class StaticClassDemo {
   }  
 }
 
-listing 35
+listing 36
 // Demonstrate optional arguments. 
   
 using System;  
@@ -1398,7 +1431,7 @@ class OptionArgDemo {
   }   
 }
 
-listing 36
+listing 37
 // Use an optional argument to simplify a call to a method. 
   
 using System;  
@@ -1428,7 +1461,7 @@ class UseOptArgs {
   }   
 }
 
-listing 37
+listing 38
 // Use named arguments. 
   
 using System;  
