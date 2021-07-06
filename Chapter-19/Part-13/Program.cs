@@ -80,22 +80,6 @@ class LetDemo
  в массиве отдельных символов, которые затем сортируются по нарастающей
  и возвращаются в виде конечного результата.
 
-Оператор let может также использоваться для хранения неперечислимого значения.
-В качестве примера ниже приведен более эффективный вариант формирования
-запроса в программе IntoDemo из предыдущего раздела.
-
-var webAddrs = from addr in websites
-let idx = addr.LastIndexOf('.')
-where idx != -1
-group addr by addr.Substring(idx)
-into ws
-where ws.Count() > 2
-select ws;
-
-В этом варианте индекс последнего вхождения символа точки в строку присваивается
-переменной idx. Данное значение затем используется в методе Substring().
-Благодаря этому исключается необходимость дважды искать символ точки в строке.
-
 */
 
 #endregion
@@ -176,22 +160,6 @@ in C# are convertible to IEnumerable<T>, chrArray can be used as a data source f
 nested from clause. This is what happens in the example. It uses the nested from to enumerate
 the individual characters in the array, sorting them into ascending sequence and returning
 the result.
-
-You can also use a let clause to hold a non-enumerable value. For example, the following
-is a more efficient way to write the query used in the IntoDemo program shown in the
-preceding section.
-
-var webAddrs = from addr in websites
-let idx = addr.LastIndexOf('.')
-where idx != -1
-group addr by addr.Substring(idx)
-into ws
-where ws.Count() > 2
-select ws;
-
-In this version, the index of the last occurrence of a period is assigned to idx. This value
-is then used by Substring( ). This prevents the search for the period from having to be
-conducted twice.
 
 */
 
